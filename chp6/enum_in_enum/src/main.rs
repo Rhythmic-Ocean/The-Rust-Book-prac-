@@ -5,7 +5,7 @@ enum UsState{
     //-snip
 }
 
-#[derive(Debug)]
+#[derive(Debug)] //NOTE: It must be atop evevery enum/ struct that u intend to print using debug trait
 enum Coin{
     Penny,
     Nickle,

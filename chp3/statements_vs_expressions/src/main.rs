@@ -7,7 +7,5 @@ fn main(){
     //let x = (let y = 6); //error cuz statements don't return a value, the error will say "expected expression"
     let y = {
         let x = 3;
-        x + 1;
-    };
-    println!("{:?}", y);
-}
+        x + 1
+    };//the block covered by the curely braces is an expression

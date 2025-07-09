@@ -8,6 +8,8 @@ fn main(){
     println!("{}",a[0]);
 }
 
+fn another_function(x:i32)
+
 //in a tuple u can have different data types but in array, u can only have one data type
 //array can only be of fixed length, no changes after decleration, 
 //for array data is allocated in stack rather than heap

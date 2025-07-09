@@ -5,14 +5,16 @@ fn main() {
 }
 
 fn first_word(s: &String) -> usize{
-    let bytes = s.as_bytes();
+    let bytes = s.as_bytes();//has an array of the given string in byte form
     for byte in bytes{
-        println!("{}", byte);
+        println!("{}", byte); //printing each array
     }
-    for (i, &item) in bytes.iter().enumerate(){
-        if item == b' '{
+    for (i, &item) in bytes.iter().enumerate(){ //&item is each item in byte while i is it's corresponding position
+    //.enumerate() returns each element as a part of a tuple
+        if item == b' '{ //b' ' is basically space in byte format, it's like 32 in u8 format
             return i;
         }
     }
     s.len()
 }
+//NOTE IN RUST WE CAN USE TUPLES TO DESTRUCTURE PATTERNS!!!

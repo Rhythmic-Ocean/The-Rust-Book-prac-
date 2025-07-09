@@ -4,6 +4,8 @@ struct User {
     sign_in_count: u64,
     active: bool
 }
+
+struct Color (i32, i32, i32); //struct tuple!!
 fn main() {
 
     let email = String::from("hello@gmail.com");
@@ -12,6 +14,7 @@ fn main() {
     println!("{}", user1.sign_in_count);
 }
 
+let black = Color(0, 0, 0);
 fn build_user(username: String, email: String) -> User{
     let user1 = User{
         email, //beacause email field and email parameter has the same name
@@ -21,4 +24,10 @@ fn build_user(username: String, email: String) -> User{
     };
     
     user1
+//CREATING INSTANCES FROM OTHER INSTANCES!!
+    let user2 = User{
+        email:String::from("hi@gmail.com"),
+        username: String::from("hi"),
+        ..user1 //active and sign_in_count from user1 is stored here!
+    }
 }
