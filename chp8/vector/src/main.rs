@@ -67,10 +67,13 @@ enum Spreadsheet{
     Text(String),
 }
 
+fn hel(){
+
 let multi_type_vec = vec![
     Spreadsheet::Int(3),
     Spreadsheet::Float(3.5),
-    Spreadsheet::Text("Me"),
-]
+    Spreadsheet::Text("Me".to_string()),
+    ];
+}
 
 
